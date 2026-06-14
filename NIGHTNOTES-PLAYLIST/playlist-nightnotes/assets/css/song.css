@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: #3a3a3a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    overflow: auto;
+    min-height: 100vh;
+
+}
+
+/* Container principal da playlist */
+.playlist-container {
+    width: 90%;
+    max-width: 2200px;
+    background-color: #16413b; /* verde escuro idêntico ao wireframe */
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cabeçalho da playlist */
+.playlist-header {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background-color: #40004a;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.playlist-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+.playlist-cover {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #0056b3; /* Borda azul simulando a seleção do wireframe */
+}
+
+.playlist-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.playlist-name {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.playlist-desc, .playlist-creator {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+}
+
+.play-btn {
+    margin-top: 15px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: #f6f5ea;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Tabela de músicas */
+.playlist-tracks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* Ajuste na proporção para caber álbuns maiores */
+.track-header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    gap: 15px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.track span {
+    font-size: 0.95rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Evita quebra de texto feia em telas menores */
+}
+
+/* Deixa o nome da música um pouco mais destacado se desejar */
+.track-name {
+    font-weight: 500;
+}
+
+.playlist-creator-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.creator-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.playlist-cover, 
+.playlist-name, 
+.playlist-creator, 
+.play-btn {
+    cursor: pointer;
+}
+
+.track {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.track:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Efeito opcional de seleção */
+}
